@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/SignUp.css';
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from "../config";
 
 function SignUp() {
   const navigate = useNavigate(); // ✅ fixes 'navigate' is not defined
@@ -27,7 +28,7 @@ function SignUp() {
 
 
   try {
-    const response = await fetch('http://localhost:5000/api/auth/signup', {
+    const response = await fetch('${API_BASE_URL}/api/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

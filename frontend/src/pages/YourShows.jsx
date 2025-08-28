@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/YourShows.css';
+import API_BASE_URL from "../config";
+
 
 function YourShows() {
   const [bookings, setBookings] = useState([]);
@@ -15,7 +17,7 @@ function YourShows() {
       }
 
       try {
-        const res = await fetch(`http://localhost:5000/api/booking/user-bookings?email=${email}`);
+        const res = await fetch(`${API_BASE_URL}/api/booking/user-bookings?email=${email}`);
         const data = await res.json();
         console.log("Fetched bookings:", data);
         setBookings(data);

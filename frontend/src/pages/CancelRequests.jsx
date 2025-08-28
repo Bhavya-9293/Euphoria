@@ -1,6 +1,7 @@
 // src/pages/CancelRequests.jsx
 import React, { useEffect, useState } from 'react';
 import '../styles/CancelRequests.css';
+import API_BASE_URL from "../config";
 
 function CancelRequests() {
   const [cancelRequests, setCancelRequests] = useState([]);
@@ -11,7 +12,7 @@ function CancelRequests() {
 
   const fetchCancelRequests = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/booking/cancel-requests');
+      const res = await fetch('${API_BASE_URL}/api/booking/cancel-requests');
       const data = await res.json();
       setCancelRequests(data);
     } catch (error) {
@@ -21,7 +22,7 @@ function CancelRequests() {
 
   const handleApprove = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/booking/cancel-approve/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/api/booking/cancel-approve/${id}`, {
         method: 'POST'
       });
 

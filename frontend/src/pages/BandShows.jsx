@@ -5,7 +5,7 @@ import boxQR from '../assets/boxqr.png';
 import upperQR from '../assets/upperqr.png';
 import generalQR from '../assets/generalqr.png';
 import BookingForm from './BookingForm';
-
+import API_BASE_URL from "../config";
 
 function BandShows() {
   const { bandName } = useParams();
@@ -15,7 +15,7 @@ function BandShows() {
   const [formVisible, setFormVisible] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/shows/band/${bandName}`)
+    fetch(`${API_BASE_URL}/api/shows/band/${bandName}`)
       .then((res) => res.json())
       .then((data) => setShows(data))
       .catch((err) => console.error('Error fetching shows:', err));

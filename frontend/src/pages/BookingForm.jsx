@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/BookingForm.css';
+import API_BASE_URL from "../config";
 
 function BookingForm({ showId, seatType, onClose }) {
   const [formData, setFormData] = useState({
@@ -16,7 +17,7 @@ function BookingForm({ showId, seatType, onClose }) {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/api/booking/submit', {
+      const response = await fetch('${API_BASE_URL}/api/booking/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

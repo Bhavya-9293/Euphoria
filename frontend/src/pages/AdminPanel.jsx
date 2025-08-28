@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import API_BASE_URL from "../config";
 import '../styles/AdminPanel.css';
 
 function AdminPanel() {
@@ -12,7 +12,7 @@ function AdminPanel() {
 
   const fetchRequests = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/booking/requests');
+      const res = await fetch('${API_BASE_URL}/api/booking/requests');
       const data = await res.json();
       setRequests(data);
     } catch (err) {
@@ -22,7 +22,7 @@ function AdminPanel() {
 
   const handleApprove = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/booking/approve/${id}`, {
+      const res = await fetch(`${API_BASE_URL}/api/booking/approve/${id}`, {
         method: 'POST'
       });
 

@@ -37,3 +37,15 @@ mongoose.connect('mongodb://127.0.0.1:27017/euphoria', {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+const path = require("path");
+
+// Serve frontend build in production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  });
+}
+
