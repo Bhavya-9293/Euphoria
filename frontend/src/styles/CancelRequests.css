@@ -1,0 +1,36 @@
+.cancel-requests {
+  padding: 40px;
+  text-align: center;
+}
+
+.cancel-request-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cancel-request-card {
+  border: 1px solid #ccc;
+  background: #4a0a52;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cancel-request-card button {
+  background: #8e188e;
+  color: #4a0a52;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  
+}
+
+.cancel-request-card button:hover {
+  background: #090909;
+}

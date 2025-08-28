@@ -1,0 +1,60 @@
+.admin-container {
+  padding: 30px;
+  background-color: black;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-container h2 {
+  color: #8E188E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.request-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.request-card {
+  background-color: #4A0A52;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+}
+
+.request-card p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.request-card strong {
+  color: #8E188E;
+}
+
+.request-card button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: none;
+  background-color: #8E188E;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: bold;
+}
+
+.request-card button:hover {
+  background-color: #a020a0;
+}
+
+p {
+  font-size: 14px;
+}

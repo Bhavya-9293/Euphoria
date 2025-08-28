@@ -1,0 +1,171 @@
+@import '../styles/variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+
+
+.landing-container {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.euphoria-title {
+  font-family: 'Comfortaa', cursive;
+  font-size: 4rem;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #8E188E, #FF6EE2, #8E188E);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px #4A0A52;
+  letter-spacing: 2px;
+  text-align: center;
+
+  /* Cute animations */
+  animation:
+    gradientWave 4s ease-in-out infinite,
+    sparkleGlow 2s ease-in-out infinite,
+    floatText 3s ease-in-out infinite;
+}
+
+
+
+/* Animations */
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes sparkleGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #8E188E, 0 0 20px #FF6EE2;
+  }
+  50% {
+    text-shadow: 0 0 15px #FF6EE2, 0 0 30px #8E188E;
+  }
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+@keyframes fadeBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.euphoria-logo {
+  width: 100px;
+  height: auto;
+  margin-top: 1rem;
+  animation: logoGlow 2s ease-in-out infinite, floatLogo 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px #8E188E);
+}
+
+/* Same glow pulse like the text */
+@keyframes logoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #8E188E);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #FF6EE2);
+  }
+}
+
+/* Gentle floating effect */
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.brand-text {
+  color: var(--color-primary);
+  font-size: 4rem;
+  font-family: 'Cinzel Decorative', cursive;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-in effect */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card-section {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.card {
+  padding: 2rem 3rem;
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  background-color: var(--color-primary);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    text-align: center;
+  }
+}

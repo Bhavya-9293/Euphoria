@@ -1,0 +1,45 @@
+/* src/styles/UserShows.css */
+
+.user-shows-container {
+  padding: 2rem;
+  background-color: black;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.user-shows-container h2 {
+  color: #8E188E;
+  margin-bottom: 2rem;
+}
+
+.user-show-card {
+  background-color: #4A0A52;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(142, 24, 142, 0.5);
+  margin: 1rem auto;
+  width: 300px;
+  text-align: left;
+  color: white;
+}
+
+.user-show-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.user-show-card button {
+  margin-top: 1rem;
+  background-color: #8E188E;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-show-card button:hover {
+  background-color: #a720a7;
+}

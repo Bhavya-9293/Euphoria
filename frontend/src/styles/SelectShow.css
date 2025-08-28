@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+.select-show-container {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.select-show-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ffb3ff;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 1px;
+}
+
+.band-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  padding: 1rem 2rem;
+}
+
+.band-card {
+  background-color: #4A0A52;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 0 15px #8E188E;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 220px;
+}
+
+.band-card:hover {
+  transform: scale(1.05);
+}
+
+.band-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.band-card h3 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

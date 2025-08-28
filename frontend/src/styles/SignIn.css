@@ -1,0 +1,60 @@
+@import './variables.css';
+
+.signin-container {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signin-title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.signin-form input {
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.signin-form button {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signin-form button:hover {
+  background-color: var(--color-primary);
+}
+
+.signup-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+}
+
+.signup-link span {
+  color: var(--color-primary);
+  cursor: pointer;
+  text-decoration: underline;
+}
